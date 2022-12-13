@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+@font-face
+{
+    font-family: Nunito;
+    src: local(Nunito);
+}
+
+:root
+{
+    /* Paleta de Cores:*/
+    --Light: rgb(209, 216, 236);
+    --Dark: rgb(39, 55, 76); 
+}
+
+*
+{
+    font-family: Nunito,Arial, Helvetica, sans-serif;
+}
+
+header
+{
+    background-color: white;
+}
+body
+{
+    background-color: white ;
+    color: var(--Dark);
+}
+
+section#container{
+    background-color: var(--Light);
+}
