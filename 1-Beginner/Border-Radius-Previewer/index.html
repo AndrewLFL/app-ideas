@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Border Radius Previewer</title>
     <link rel="stylesheet" href="estilos/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 <body>
     <header>
@@ -13,19 +14,21 @@
     </header>
     <main>
         <section id="container">
-            <div id="Objeto">
-
+            <div id="objeto">
             </div>
         </section>
-        <h2>Configurações</h2>
+        <div id="config">
+            <h2>Configuração</h2>
+            <label for="radius">Radius</label>
+            <input type="range" name="radius" id="radius" min="0" max="100" value="50" oninput="val.innerHTML = Number(radius.value)">
+            <output id="val">50</output>
         <h2>CSS</h2>
-        <section id="codigo">
-
+        <input type="button" value="Copiar">
+    </div>
+        <section id="area">
+            <div id="codigo"></div>
         </section>
     </main>
-    <footer>
-        <a href="https://github.com/AndrewLFL">GitHub</a>
-    </footer>
     <script src="script.js"></script>
 </body>
 </html>
