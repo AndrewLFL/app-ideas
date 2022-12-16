@@ -19,11 +19,30 @@
         </section>
         <div id="config">
             <h2>Configuração</h2>
-            <label for="radius">Radius</label>
-            <input type="range" name="radius" id="radius" min="0" max="100" value="50" oninput="val.innerHTML = Number(radius.value)">
-            <output id="val">50</output>
+            <ul>
+                <li>            
+                    <label for="tl">border-top-left-radius</label>
+                    <input type="range" name="tl" id="tl" min="0" max="150" value="75" oninput="val1.innerHTML = Number(tl.value)">
+                    <output id="val1">75</output> 
+                </li>
+                <li>
+                    <label for="tr">border-top-right-radius</label>
+                    <input type="range" name="tr" id="tr" min="0" max="150" value="75" oninput="val2.innerHTML = Number(tr.value)">
+                    <output id="val2">75</output>
+                </li>
+                <li>
+                    <label for="bl">border-bottom-left-radius</label>
+                    <input type="range" name="bl" id="bl" min="0" max="150" value="75" oninput="val3.innerHTML = Number(bl.value)">
+                    <output id="val3">75</output> 
+                </li>
+                <li> 
+                    <label for="br">border-bottom-right-radius</label>
+                    <input type="range" name="br" id="br" min="0" max="150" value="75" oninput="val4.innerHTML = Number(br.value)">
+                    <output id="val4">75</output>
+                </li>
+            </ul>
         <h2>CSS</h2>
-        <input type="button" value="Copiar">
+        <input type="button" value="Copiar" id="btnCopiar">
     </div>
         <section id="area">
             <div id="codigo"></div>
