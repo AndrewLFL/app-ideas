@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de JSON e CSV</title>
+    <link rel="stylesheet" href="estilos/style.css">
+</head>
+<body>
+    <header>
+        <h1>Conversor de JSON e CSV</h1>
+    </header>
+    <main>
+        <section>
+            <h1>JSON para CSV</h1>
+                <h2>JSON</h2>
+                <textarea name="json_01" id="json_01" cols="30" rows="10"></textarea>
+                <h2>CSV</h2>
+                <textarea name="csv_01" id="csv_01" cols="30" rows="10" disabled></textarea>
+            <div class="butoes">
+                <input type="button" value="Converter" id="conv_json_csv" onclick="converter_json_csv()">
+                <input type="button" value="Limpar" id="limpar_01">
+                <input type="button" value="Copiar" id="btnCopiar_01">
+            </div>
+        </section>
+        <section>
+            <h1>CSV para JSON</h1>
+                <h2>CSV</h2>
+                <textarea name="csv_02" id="csv_02" cols="30" rows="10"></textarea>
+                <h2>JSON</h2>
+                <textarea name="json_02" id="json_02" cols="30" rows="10" disabled></textarea>
+            <div class="butoes">
+                <input type="button" value="Converter" id="conv_csv_json" onclick="converter_csv_json()">
+                <input type="button" value="Limpar" id="limpar_02">
+                <input type="button" value="Copiar" id="btnCopiar_02">
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
