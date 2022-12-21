@@ -15,15 +15,59 @@ var btnCopiar_01 = document.getElementById("btnCopiar_01");
 var btnCopiar_02 = document.getElementById("btnCopiar_02");
 
 function converter_json_csv ()
-{
+{   
         console.log(json_01.value);
         csv_01.innerHTML = " ";
         if(!validar_json(json_01.value))
         return;
         
-        var dados = JSON.parse(json_01.value);
-        console.log(dados);
+        var objDados = JSON.parse(json_01.value);
+        console.log(objDados);
+
+        var stringDados = JSON.stringify(objDados)
+        console.log(stringDados);
+
+        var propriedades = [];
+        var quebraLinhas = stringDados.split(",");
+        for(let i =0 ; i<quebraLinhas.length; i++)
+        {
+            console.log(quebraLinhas[i])
+        }
+
+        for(item of quebraLinhas)
+        {
+            let nomes = item.split('"');
+            console.log(nomes)
+            propriedades.push(nomes[1]);
+        }
+        console.log(propriedades);
+
+        var prototipoCSV = [];
+        prototipoCSV[0] = '';
+        for(prop of propriedades)
+        {
+             prototipoCSV[0]+= '"' + prop + '",';
+
+        }
+        console.log(prototipoCSV);
+
+        prototipoCSV[0] += '\n'
+        for(let i =0; i<quebraLinhas.length ; i++)
+        {
+            prototipoCSV[i+1] = '';
+            dados = quebraLinhas[i].split(':');
+            console.log(` esse é o ${i} dado: ${dados}`);
+            if(i==quebraLinhas.length-1)
+            {
+                let subDados = dados[1].split('}');
+                prototipoCSV += subDados[0] 
+            }
+            else
+            prototipoCSV += dados[1]  + ','
+        }
+        csv_01.innerHTML = prototipoCSV;
 }
+
 
 function converter_csv_json ()
 {
