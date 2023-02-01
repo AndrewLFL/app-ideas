@@ -13,13 +13,12 @@ main {
     bottom: 0px;
     right: 0%;
     left: 0%;
-
 }
 
 div#calculadora
 {
     width: 360px;
-    height: 541px;
+    height: 572px;
     background-color: #32302f;
     margin: auto;
 
@@ -30,7 +29,7 @@ div#calculadora
 div#visor
 {
     text-align: right;
-    background-color: rgb(172, 172, 172);
+    background-color: rgb(235, 235, 235);
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
     height: 180px;
